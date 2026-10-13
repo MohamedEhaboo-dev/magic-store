@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html manifest="../cache.manifest">
+<head>
+<meta charset="UTF-8">
+<title>HIMA STORE - Mohamed Ehab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{background:#0a0a0a;color:#fff;font-family:Arial;text-align:center;padding-top:30px}
+.logo{width:180px;filter:drop-shadow(0 0 15px #00e5ff)}
+h1{color:#00e5ff;letter-spacing:3px;text-shadow:0 0 15px #00e5ff}
+.box{border:2px solid #00e5ff;width:80%;max-width:300px;margin:15px auto;padding:15px;border-radius:15px;background:#111}
+.box2{border-color:#00ff88}
+#status{margin-top:20px;font-size:16px;color:#00ff88;direction:rtl}
+</style>
+</head>
+<body>
+<img class="logo" src="../hima_store_transparent.png" onerror="this.style.display='none'">
+<h1>◆ HIMA STORE ◆</h1>
+<p>اختار سوفت جهازك</p>
+
+<div class="box"><b>13.02 - 13.52</b><br><small>LATEST - 13.52</small></div>
+<div class="box box2"><b>11.50 - 13.00</b><br><small>انت هنا 12.52 - دوس هنا</small></div>
+<div class="box"><b>6.00 - 11.02</b><br><small>LAPSE</small></div>
+
+<div id="status">جاري تحميل كاش HIMA STORE...</div>
+
+<script>
+function getFW(){
+ var ua=navigator.userAgent;
+ var m=ua.match(/(\d+\.\d+)/);
+ return m?parseFloat(m[1]):12.52;
+}
+function loadS(src){
+ var s=document.createElement('script');
+ s.src=src;
+ s.onerror=function(){document.getElementById('status').innerHTML='جاري المحاولة... '+src};
+ document.head.appendChild(s);
+}
+window.onload=function(){
+ var fw=getFW();
+ document.getElementById('status').innerHTML='تم اكتشاف السوفت: '+fw+'<br>سيب الجهاز 30 ثانية... rawgame4 جاري تشغيل';
+ loadS('./main.js');
+ setTimeout(function(){
+   if(fw>=13.02){loadS('./1352/runner.js');}
+   else if(fw>=11.50){loadS('./rawgame4-runner.js');}
+   else{loadS('./lapse.js');}
+ },1500);
+};
+window.applicationCache&&window.applicationCache.addEventListener('cached',function(){
+ document.getElementById('status').innerHTML='✅ تم حفظ كاش HIMA STORE - هيشتغل بدون نت!';
+});
+</script>
+</body>
+</html>
