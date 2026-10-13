@@ -2,24 +2,42 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HIMA STORE</title>
+<title>HIMA STORE - 12.52</title>
 <style>
 body{margin:0;background:#000;color:#fff;font-family:Arial;text-align:center}
-.header{padding:20px;background:#0a0a0a;border-bottom:3px solid #00aaff}
-.header h1{margin:0;font-size:28px;text-shadow:0 0 15px #00aaff}
-.menu{padding:20px;display:grid;gap:15px;max-width:400px;margin:20px auto}
-.btn{padding:20px;background:#111;border:2px solid #00aaff;border-radius:12px;color:#fff;font-size:20px;font-weight:bold}
+h1{margin:20px 0;color:#00aaff;text-shadow:0 0 10px #00aaff}
+.btn{width:90%;max-width:400px;padding:22px;margin:12px auto;display:block;background:#111;border:2px solid #00aaff;border-radius:15px;color:#fff;font-size:22px;font-weight:bold}
 .btn:active{background:#00aaff}
+small{font-size:13px;color:#8cf}
+#log{margin-top:20px;color:#0f0;font-size:14px;white-space:pre-wrap}
 </style>
 </head>
 <body>
-<div class="header"><h1>✦ HIMA STORE ✦</h1><p>6.00 - 13.52</p></div>
-<div class="menu">
-<button class="btn" onclick="location.href='./1352/'">13.02 - 13.52<br><small style="color:#0f0">LATEST</small></button>
-<button class="btn" onclick="location.href='./rawgame4/'">11.50 - 13.00</button>
-<button class="btn" onclick="location.href='./ps4/'">6.00 - 11.02</button>
-</div>
-<div style="color:#555;margin-top:20px">Mohamed Ehab - 01026601654</div>
+<h1>✦ HIMA STORE ✦</h1>
+<p>اختار سوفت جهازك</p>
+
+<button class="btn" onclick="start('1352')">13.02 - 13.52<br><small>LATEST - 13.52</small></button>
+<button class="btn" onclick="start('rawgame4')" style="border-color:#00ff88;color:#00ff88">11.50 - 13.00<br><small>انت هنا - 12.52 دوس هنا</small></button>
+<button class="btn" onclick="start('lapse')">6.00 - 11.02<br><small>LAPSE</small></button>
+
+<div id="log">Mohamed Ehab - 01026601654<br>Belbeis - HIMA STORE</div>
+
+<script>
+function start(v){
+  document.getElementById('log').innerHTML = 'جاري تشغيل ' + v + ' ... سيب الجهاز 30 ثانية';
+  if(v==='rawgame4'){
+    let s=document.createElement('script');
+    s.src='./rawgame4-runner.js';
+    document.body.appendChild(s);
+  }else if(v==='1352'){
+    location.href='./1352/index.html';
+  }else{
+    let s=document.createElement('script');
+    s.src='./lapse.js';
+    document.body.appendChild(s);
+  }
+}
+</script>
+<script src="./main.js"></script>
 </body>
 </html>
