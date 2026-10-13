@@ -3,41 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HIMA STORE - MAGIC STORE</title>
+<title>HIMA STORE</title>
 <style>
 body{margin:0;background:#000;color:#fff;font-family:Arial;text-align:center}
 .header{padding:20px;background:#0a0a0a;border-bottom:3px solid #00aaff}
-.header h1{margin:0;font-size:32px;color:#fff;text-shadow:0 0 15px #00aaff;letter-spacing:2px}
-.header p{margin:5px 0 0;color:#00aaff}
-.menu{padding:30px 15px;display:grid;gap:15px;max-width:500px;margin:0 auto}
-.btn{padding:18px;background:linear-gradient(90deg,#001a33,#003366);border:2px solid #00aaff;border-radius:12px;color:#fff;font-size:18px;font-weight:bold;cursor:pointer;transition:0.2s}
-.btn:hover{background:#00aaff;transform:scale(1.02);box-shadow:0 0 20px #00aaff}
-.btn span{font-size:13px;display:block;color:#8cf;margin-top:5px}
-.footer{margin-top:30px;color:#666;font-size:12px}
+.header h1{margin:0;font-size:28px;text-shadow:0 0 15px #00aaff}
+.menu{padding:20px;display:grid;gap:15px;max-width:400px;margin:20px auto}
+.btn{padding:20px;background:#111;border:2px solid #00aaff;border-radius:12px;color:#fff;font-size:20px;font-weight:bold}
+.btn:active{background:#00aaff}
 </style>
 </head>
 <body>
-<div class="header">
-<h1>✦ HIMA STORE ✦</h1>
-<p>MAGIC STORE - PS4 JAILBREAK 6.00 - 13.52</p>
-</div>
-
+<div class="header"><h1>✦ HIMA STORE ✦</h1><p>6.00 - 13.52</p></div>
 <div class="menu">
-<button class="btn" onclick="location.href='./ps4/900.html'">PS4 9.00<span>Lapse Exploit</span></button>
-<button class="btn" onclick="run('lapse')">6.00 - 11.02 - LAPSE<span>Stable - Recommended</span></button>
-<button class="btn" onclick="run('rawgame4')">11.50 - 13.00 - RAW GAME 4<span>Auto Detect</span></button>
-<button class="btn" style="border-color:#ffaa00;background:linear-gradient(90deg,#332200,#664400)" onclick="run('raw13g')">13.02 - 13.52 - RAW 13G<span>NEW - Lapse 13.52</span></button>
+<button class="btn" onclick="location.href='./1352/'">13.02 - 13.52<br><small style="color:#0f0">LATEST</small></button>
+<button class="btn" onclick="location.href='./rawgame4/'">11.50 - 13.00</button>
+<button class="btn" onclick="location.href='./ps4/'">6.00 - 11.02</button>
 </div>
-
-<div class="footer">Mohamed Ehab - 01026601654 - Belbeis<br>Powered by HIMA STORE</div>
-
-<script src="./ps4/webkit.js"></script>
-<script>
-function run(m){
-  if(m==='lapse') location.href='./lapse.html';
-  if(m==='rawgame4') location.href='./rawgame4/index.html';
-  if(m==='raw13g') location.href='./1352/index.html';
-}
-</script>
+<div style="color:#555;margin-top:20px">Mohamed Ehab - 01026601654</div>
 </body>
 </html>
