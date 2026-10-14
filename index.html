@@ -2,41 +2,101 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8">
-    <title>MAGIC STORE - Auto GoldHEN</title>
-    <meta http-equiv="refresh" content="0; url=hima-auto.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAGIC STORE - PS4 Exploit Portal</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             background-color: #04080f;
             color: #00d2ff;
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
         }
-        .loader {
-            border: 4px solid #080e18;
-            border-top: 4px solid #00d2ff;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin-bottom: 20px;
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(0, 210, 255, 0.8);
+            margin-bottom: 10px;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        p.subtitle {
+            color: #a0aec0;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .btn {
+            background: #080e18;
+            border: 2px solid #00d2ff;
+            color: #00d2ff;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn:hover, .btn:active {
+            background: #00d2ff;
+            color: #04080f;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.9);
+            transform: translateY(-3px);
+        }
+        .btn-gold {
+            border-color: #ffe600;
+            color: #ffe600;
+            box-shadow: 0 0 10px rgba(255, 230, 0, 0.2);
+        }
+        .btn-gold:hover, .btn-gold:active {
+            background: #ffe600;
+            color: #04080f;
+            box-shadow: 0 0 25px rgba(255, 230, 0, 0.9);
+        }
+        footer {
+            margin-top: 50px;
+            color: #4a5568;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <div class="loader"></div>
-    <h2>جاري تشغيل GoldHEN تلقائياً... MAGIC STORE</h2>
-    <p>برجاء الانتظار قليلاً</p>
-    <script>
-        window.location.href = "hima-auto.html";
-    </script>
+
+    <h1>MAGIC STORE</h1>
+    <p class="subtitle">بوابة تعديل واختبار ثغرات PS4</p>
+
+    <div class="container">
+        <!-- زر التغعيل التلقائي للجولد هين -->
+        <a href="hima-auto.html" class="btn btn-gold">
+            ⚡ GoldHEN Auto (5.05 - 9.00)
+        </a>
+
+        <!-- زر ثغرة المتصفح للسوفتات الحديثة -->
+        <a href="1352/index.html" class="btn">
+            🌐 WebKit Exploit (Up to 13.52)
+        </a>
+    </div>
+
+    <footer>MAGIC STORE Host v2.0 &bull; Mohamedehaboo</footer>
+
 </body>
 </html>
